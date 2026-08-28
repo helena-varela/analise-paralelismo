@@ -1,0 +1,11 @@
+# Arquivo executável compilado
+varredor
+
+# Arquivos parciais temporários gerados pelo modo 'processo'
+parcial_*.txt
+
+# Arquivo de saída de dados
+resultados.csv
+
+# Pastas de configuração de editores (opcional)
+.vscode/
