@@ -1,14 +1,15 @@
+#!/bin/bash
 echo "Compilando o projeto..."
 make clean
 make
 
-echo "Iniciando bateria da Entrega Final (80 testes)"
+echo "Iniciando bateria complementar da Entrega Final (W=2, 4 e 8)..."
 
-for W in 1 2 4 8; do
+for W in 2 4 8; do
   for modo in thread processo; do
     for particao in bloco ciclico; do
       for rep in 1 2 3 4 5; do
-        echo "Rodando Entrega Final: W=$W, $modo, $particao (Repetição $rep/5)..."
+        echo "Rodando Final: W=$W, $modo, $particao (Repetição $rep/5)..."
         ./varredor 100033713 8100067426 213 $W $modo $particao resultados.csv
       done
     done
