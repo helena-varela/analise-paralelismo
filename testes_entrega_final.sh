@@ -2,8 +2,6 @@ echo "Compilando o projeto..."
 make clean
 make
 
-rm -f resultados.csv
-
 echo "Iniciando bateria da Entrega Final (80 testes)"
 
 for W in 1 2 4 8; do
