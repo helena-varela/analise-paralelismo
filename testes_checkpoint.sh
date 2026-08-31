@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Compilando o projeto..."
 make clean
 make
