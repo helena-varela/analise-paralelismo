@@ -3,7 +3,7 @@ echo "Compilando o projeto..."
 make clean
 make
 
-echo "Iniciando bateria complementar da Entrega Final (W=2, 4 e 8)..."
+echo "Iniciando bateria complementar da Entrega Final (60 testes com W=2, 4 e 8)"
 
 for W in 2 4 8; do
   for modo in thread processo; do
