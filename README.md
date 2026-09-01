@@ -63,6 +63,21 @@ Parâmetros:
 
 <arquivo_saida>: Caminho do arquivo CSV de saída (gerado em modo append).
 ```
+## 🤖 Automação e Scripts de Teste
+Para garantir a reprodutibilidade dos experimentos e evitar o acionamento manual repetitivo do binário, o repositório conta com dois scripts em Bash:
+
+1. ```testes_checkpoint.sh```:
+
+    **Objetivo:** Destinado à execução da solução linear do projeto.
+
+    **Funcionamento:** Fixa o número de unidades em $W = 1$ e varre as combinações de modos (thread e processo) e partições (bloco e ciclico) garantindo as repetições necessárias para a primeira entrega (Checkpoint).
+
+2. ```testes_entrega_final.sh```:
+  
+    **Objetivo:** Responsável pela bateria completa de testes de desempenho multithread e multiprocesso.
+
+    **Funcionamento:** Utiliza laços de repetição aninhados para iterar automaticamente sobre os graus de concorrência ($W \in \{2, 4, 8\}$), alternando entre os modelos de isolamento, as partições e aplicando 5 repetições por cenário para gerar o conjunto completo de dados no arquivo CSV.
+
 ## 📊 Formato de Saída (CSV)
 Após a execução, o programa salva uma única linha no CSV especificado contendo os agregados finais formatados:
 
